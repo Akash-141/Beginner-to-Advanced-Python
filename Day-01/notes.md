@@ -41,10 +41,6 @@ Python is used in:
 - Automation
 - Scientific computing
 
-Sources:
-TIOBE Index: https://www.tiobe.com/tiobe-index/  
-Stack Overflow Developer Survey: https://survey.stackoverflow.co/
-
 ---
 
 ## 4. How Python Code Looks
