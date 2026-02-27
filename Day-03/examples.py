@@ -1,26 +1,48 @@
+print("Day 3: Python Syntax and Indentation Examples")
+
+# Example 1: Basic Python statement
+print("Hello, Python")
+
+# Example 2: Case sensitivity
 name = "Akash"
-age = 21
-gpa = 3.75
-is_student = True
+Name = "Paul"
 
 print(name)
-print(age)
-print(gpa)
-print(is_student)
+print(Name)
 
-print(type(name))
-print(type(age))
-print(type(gpa))
-print(type(is_student))
+# Example 3: Statements on new lines
+print("Line 1")
+print("Line 2")
 
-score = 10
-print(score)
+# Allowed but not recommended
+print("Line 1"); print("Line 2")
 
-score = 25
-print(score)
+# Example 4: Single-line comment
+# This is a comment
+print("Hello")
 
-x = 100
-print(x)
+# Example 5: Multi-line comment
+"""
+This is a multi-line comment
+used for longer explanations
+"""
 
-x = "Python"
-print(x)
+# Example 6: Correct indentation
+age = 18
+
+if age >= 18:
+    print("You are an adult")
+
+# Example 7: Loop indentation
+for i in range(3):
+    print("Number:", i)
+
+# Example 8: Nested indentation
+age = 20
+has_id = True
+
+if age >= 18:
+    if has_id:
+        print("Entry allowed")
+
+print("End of Day 3 examples")
