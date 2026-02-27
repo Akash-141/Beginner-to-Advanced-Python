@@ -217,4 +217,3 @@ Today you learned:
 - Industry naming standards
 - Common mistakes to avoid
 
-Next topic: User Input and Output
