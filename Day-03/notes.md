@@ -230,4 +230,4 @@ Today you learned:
 - The industry standard 4-space rule
 - Common mistakes to avoid
 
-Next topic: Variables and Data Types
+Next topic: [Variables and Data Types](https://github.com/Akash-141/Beginner-to-Advanced-Python/blob/main/Day-04/notes.md)
