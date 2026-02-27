@@ -1,20 +1,50 @@
-name = "Alice"
-print(name)
+print("Day 5: Numbers and Basic Math Operations Examples")
 
-first = "Hello"
-second = "Python"
-print(first + " " + second)
+# Integer
+a = 10
+b = -5
+print(type(a))
 
-print("Hi " * 2)
+# Float
+price = 19.99
+temperature = -2.5
+print(type(price))
 
-text = "Python"
-print(text[0])
-print(text[-1])
+# Complex
+c = 2 + 3j
+print(type(c))
 
-print(len(text))
+# Basic operations
+x = 10
+y = 5
 
-print(text.upper())
-print(text.lower())
+print(x + y)
+print(x - y)
+print(x * y)
+print(x / y)
+print(x // y)
+print(x % y)
+print(x ** 2)
 
-sentence = "I like Java"
-print(sentence.replace("Java", "Python"))
+# Order of operations
+result = 2 + 3 * 4
+print(result)
+
+result_with_parentheses = (2 + 3) * 4
+print(result_with_parentheses)
+
+# Type conversion
+a = 10
+b = 3
+
+print(float(a))
+print(int(3.9))
+
+# Integer division confusion
+print(5 / 2)
+print(5 // 2)
+
+# Floating point precision
+print(0.1 + 0.2)
+
+print("End of Day 5 examples")
