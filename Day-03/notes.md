@@ -1,151 +1,233 @@
-# Day 3: Variables and Data Types in Python
+# Day 3: Python Syntax and Indentation
 
-## 1. What is a Variable?
+## 1. Definition of Python Syntax and Indentation
 
-A variable is a container used to store data.
+**Python syntax** refers to the rules that define how Python programs must be written so the interpreter can understand them.
 
-Think of it like a labeled box. The label is the variable name, and the content inside the box is the value.
+**Indentation** in Python means the spaces at the beginning of a line of code. Unlike many other languages that use curly braces `{}`, Python uses indentation to define code blocks.
 
-Example:
-
-```python
-name = "Akash"
-```
-
-Here:
-- `name` is the variable
-- `"Akash"` is the value stored inside it
-
----
-
-## 2. Rules for Naming Variables
-
-- Must start with a letter or underscore
-- Cannot start with a number
-- Can contain letters, numbers, and underscores
-- Case-sensitive (age and Age are different)
-
-Correct examples:
-
-```python
-age = 20
-student_name = "Rahim"
-_total = 500
-```
-
-Incorrect examples:
-
-```python
-2name = "Wrong"
-student-name = "Wrong"
-```
-
-Reference:
+Official reference:
 https://docs.python.org/3/tutorial/introduction.html
 
 ---
 
-## 3. What is a Data Type?
+## 2. Detailed Explanation of the Topic
 
-A data type tells Python what kind of value is stored in a variable.
+Python is designed to be clean and readable. Because of this:
 
-Python automatically detects the data type when you assign a value.
+- Python executes code line by line
+- Semicolons are usually not required
+- Indentation is mandatory
+- Readability is part of Python’s philosophy
+
+If syntax rules are broken, Python raises a **SyntaxError**.  
+If indentation is wrong, Python raises an **IndentationError**.
 
 ---
 
-## 4. Basic Data Types in Python
-
-### String (str)
-
-Used to store text.
+### 2.1 Basic Python Statement
 
 ```python
-city = "Dhaka"
+print("Hello, Python")
 ```
 
 ---
 
-### Integer (int)
+### 2.2 Case Sensitivity
 
-Used to store whole numbers.
+Python is case sensitive. Uppercase and lowercase names are different.
 
 ```python
-age = 25
+name = "Akash"
+Name = "Paul"
+
+print(name)
+print(Name)
 ```
 
 ---
 
-### Float (float)
+### 2.3 Statements and New Lines
 
-Used to store decimal numbers.
+Recommended:
 
 ```python
-price = 99.99
+print("Line 1")
+print("Line 2")
+```
+
+Allowed but not recommended:
+
+```python
+print("Line 1"); print("Line 2")
 ```
 
 ---
 
-### Boolean (bool)
+### 2.4 Comments in Python
 
-Represents True or False.
+Single-line comment:
 
 ```python
-is_student = True
+# This is a comment
+print("Hello")
+```
+
+Multi-line comment:
+
+```python
+"""
+This is a multi-line comment
+used for longer explanations
+"""
+```
+
+Reference:
+https://docs.python.org/3/tutorial/introduction.html#comments
+
+---
+
+## 3. Understanding Indentation
+
+Indentation is the leading whitespace before code. It defines blocks such as:
+
+- if statements
+- loops
+- functions
+- classes
+
+---
+
+### 3.1 Correct Indentation Example
+
+```python
+age = 18
+
+if age >= 18:
+    print("You are an adult")
 ```
 
 ---
 
-## 5. Checking Data Type
-
-You can check the type using the type() function.
+### 3.2 Incorrect Indentation Example
 
 ```python
-age = 25
-print(type(age))
+age = 18
+
+if age >= 18:
+print("You are an adult")
+```
+
+This causes:
+
+```
+IndentationError: expected an indented block
 ```
 
 ---
 
-## 6. Reassigning Variables
-
-Variables can be changed.
+### 3.3 Indentation in Loops
 
 ```python
-score = 10
-score = 20
-print(score)
+for i in range(3):
+    print("Number:", i)
 ```
 
 ---
 
-## 7. Dynamic Typing
-
-Python is dynamically typed. You do not need to declare the type manually.
+### 3.4 Nested Indentation
 
 ```python
-x = 10
-x = "Now I am text"
+age = 20
+has_id = True
+
+if age >= 18:
+    if has_id:
+        print("Entry allowed")
 ```
 
-Official documentation:
-https://docs.python.org/3/reference/datamodel.html
+---
+
+## 4. Do's and Don'ts
+
+### Do's
+
+- Use **4 spaces** for indentation
+- Keep indentation consistent
+- Follow PEP 8
+- Use comments to explain complex logic
+- Use a proper code editor
+
+### Don'ts
+
+- Do NOT mix tabs and spaces
+- Do NOT skip indentation after a colon
+- Do NOT over-indent
+- Do NOT write multiple statements per line
+- Do NOT ignore indentation errors
 
 ---
 
-## Practice Tasks
+## 5. Industry Standards
 
-1. Create a variable to store your name.
-2. Create a variable to store your age.
-3. Create a variable to store your GPA.
-4. Create a boolean variable to represent whether you are a student.
-5. Print all variables and their types.
+According to **PEP 8 (Python style guide)**:
+
+- Use 4 spaces per indentation level
+- Prefer one statement per line
+- Keep code readable and consistent
+
+Reference:
+https://peps.python.org/pep-0008/#indentation
+
+Professional teams follow PEP 8 to maintain clean and maintainable code.
 
 ---
 
-## What You Learned Today
+## 6. Mistakes to Avoid
 
-- What variables are
-- Rules for naming variables
-- Basic data types (str, int, float, bool)
-- How to check data types
-- What dynamic typing means
+### Mixing Tabs and Spaces
+
+Always configure your editor to insert spaces only.
+
+---
+
+### Missing Indentation After Colon
+
+Wrong:
+
+```python
+if True:
+print("Hello")
+```
+
+---
+
+### Unexpected Indentation
+
+Wrong:
+
+```python
+    print("Hello")
+```
+
+---
+
+### Inconsistent Indentation
+
+Keep indentation uniform across the project.
+
+---
+
+## Summary
+
+Today you learned:
+
+- What Python syntax is
+- Why Python is case sensitive
+- How comments work
+- What indentation means
+- Why indentation is mandatory
+- The industry standard 4-space rule
+- Common mistakes to avoid
+
+Next topic: Variables and Data Types
