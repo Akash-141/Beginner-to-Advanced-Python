@@ -1,124 +1,184 @@
-# Day 6: Conditional Statements (if, elif, else)
+# Day 6: Strings and String Operations
 
-## 1. Why Conditionals?
+## 1. Definition of Strings
 
-Conditional statements allow your program to make decisions.
+A **string** in Python is a sequence of characters enclosed in single quotes (' '), double quotes (" "), or triple quotes (''' ''' or """ """).
 
-They execute different code depending on whether a condition is True or False.
+Strings are used to store textual data such as names, messages, sentences, and symbols.
 
-Official documentation:
-https://docs.python.org/3/tutorial/controlflow.html#if-statements
+In Python, strings are:
+- Ordered
+- Immutable (cannot be changed after creation)
+- Indexed
+- Iterable
 
----
-
-## 2. The if Statement
-
-```python
-age = 18
-
-if age >= 18:
-    print("You are an adult.")
-```
-
-The code inside the if block runs only if the condition is True.
+Official reference:
+https://docs.python.org/3/library/stdtypes.html#text-sequence-type-str
 
 ---
 
-## 3. if-else
+## 2. Detailed Explanation of the Topic
 
-Use else to run code when the condition is False.
+Strings are one of the most commonly used data types in Python. Since text processing is essential in real-world applications (web development, automation, data science, APIs, etc.), mastering string operations is critical.
 
-```python
-age = 16
+Because strings are immutable:
+- You cannot modify individual characters directly
+- Any modification creates a new string
 
-if age >= 18:
-    print("Adult")
-else:
-    print("Minor")
-```
+Python provides:
+- Indexing
+- Slicing
+- Concatenation
+- Repetition
+- Built-in string methods
+- String formatting techniques
 
 ---
 
-## 4. if-elif-else
-
-Use elif when checking multiple conditions.
+## 3. Creating Strings
 
 ```python
-score = 85
+name = "Akash"
+city = 'Dhaka'
+paragraph = """This is a
+multi-line string"""
 
-if score >= 90:
-    print("Grade A")
-elif score >= 80:
-    print("Grade B")
-elif score >= 70:
-    print("Grade C")
-else:
-    print("Grade D")
+print(name)
+print(city)
+print(paragraph)
 ```
 
 ---
 
-## 5. Comparison Operators
+## 4. String Indexing
 
-- ==  Equal to
-- !=  Not equal to
-- >   Greater than
-- <   Less than
-- >=  Greater than or equal to
-- <=  Less than or equal to
-
-Example:
+Each character has a position (index).
 
 ```python
-x = 5
-
-if x == 5:
-    print("x is 5")
+text = "Python"
+print(text[0])
+print(text[3])
+print(text[-1])
 ```
 
 ---
 
-## 6. Logical Operators
-
-- and  → Both conditions must be True
-- or   → At least one condition must be True
-- not  → Reverses the condition
-
-Example:
+## 5. String Slicing
 
 ```python
-age = 20
-has_id = True
-
-if age >= 18 and has_id:
-    print("Entry allowed")
+text = "Programming"
+print(text[0:6])
+print(text[3:])
+print(text[:5])
 ```
 
 ---
 
-## 7. Indentation Matters
+## 6. String Concatenation
 
-Python uses indentation (spaces) to define blocks of code.
-
-Incorrect indentation will cause errors.
-
----
-
-## Practice Tasks
-
-1. Write a program that checks if a number is positive or negative.
-2. Check if a number is even or odd.
-3. Create a simple grading system.
-4. Use logical operators in a condition.
-5. Ask the user for input and respond based on the value.
+```python
+first = "Hello"
+second = "World"
+result = first + " " + second
+print(result)
+```
 
 ---
 
-## What You Learned Today
+## 7. String Repetition
 
-- if statements
-- else statements
-- elif statements
-- Comparison operators
-- Logical operators
-- Importance of indentation
+```python
+print("Ha" * 3)
+```
+
+---
+
+## 8. Useful String Methods
+
+```python
+text = "Python"
+print(text.upper())
+print(text.lower())
+
+text = "   hello   "
+print(text.strip())
+
+text = "I like Java"
+print(text.replace("Java", "Python"))
+
+sentence = "Python is powerful"
+words = sentence.split()
+print(words)
+
+text = "Hello World"
+print(text.find("World"))
+```
+
+---
+
+## 9. String Formatting
+
+```python
+name = "Akash"
+age = 21
+print(f"My name is {name} and I am {age} years old")
+print("My name is {} and I am {} years old".format(name, age))
+```
+
+---
+
+## 10. Do's and Don'ts
+
+### Do's
+- Use f-strings for formatting
+- Use meaningful variable names
+- Use built-in methods
+- Handle whitespace properly
+- Remember immutability
+
+### Don'ts
+- Do NOT modify characters directly
+- Do NOT overuse + for large strings
+- Do NOT ignore case sensitivity
+- Do NOT assume user input is clean
+
+---
+
+## 11. Industry Standards
+
+According to PEP 8:
+- Prefer f-strings (Python 3.6+)
+- Keep formatting readable
+- Use descriptive names
+- Avoid complex inline expressions
+
+PEP 8 reference:
+https://peps.python.org/pep-0008/
+
+---
+
+## 12. Mistakes to Avoid
+
+```python
+text = "Python"
+# text[0] = "J"
+
+print("python" == "Python")
+
+age = "21"
+# print("Age: " + age + 5)
+```
+
+---
+
+## Summary
+
+Today you learned:
+- String creation
+- Indexing and slicing
+- Concatenation and repetition
+- Important string methods
+- Formatting techniques
+- Best practices and common mistakes
+
+Next topic: [Input and output]()
