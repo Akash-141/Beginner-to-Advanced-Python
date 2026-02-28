@@ -1,30 +1,53 @@
-number = 10
+print("Day 6: Strings and String Operations Examples")
 
-if number > 0:
-    print("Positive")
-else:
-    print("Negative or Zero")
+name = "Akash"
+city = 'Dhaka'
+paragraph = """This is a
+multi-line string"""
 
-num = 7
+print(name)
+print(city)
+print(paragraph)
 
-if num % 2 == 0:
-    print("Even")
-else:
-    print("Odd")
+text = "Python"
+print(text[0])
+print(text[3])
+print(text[-1])
 
-score = 92
+text = "Programming"
+print(text[0:6])
+print(text[3:])
+print(text[:5])
 
-if score >= 90:
-    print("A")
-elif score >= 80:
-    print("B")
-else:
-    print("C")
+first = "Hello"
+second = "World"
+result = first + " " + second
+print(result)
 
+print("Ha" * 3)
+
+text = "Python"
+print(text.upper())
+print(text.lower())
+
+text = "   hello   "
+print(text.strip())
+
+text = "I like Java"
+print(text.replace("Java", "Python"))
+
+sentence = "Python is powerful"
+words = sentence.split()
+print(words)
+
+text = "Hello World"
+print(text.find("World"))
+
+name = "Akash"
 age = 21
-has_id = True
+print(f"My name is {name} and I am {age} years old")
+print("My name is {} and I am {} years old".format(name, age))
 
-if age >= 18 and has_id:
-    print("Access granted")
-else:
-    print("Access denied")
+print("python" == "Python")
+
+print("End of Day 6 examples")
