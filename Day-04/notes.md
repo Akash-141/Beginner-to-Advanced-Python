@@ -217,3 +217,7 @@ Today you learned:
 - Industry naming standards
 - Common mistakes to avoid
 
+Next topic: [Numbers and Basic Math Operations](https://github.com/Akash-141/Beginner-to-Advanced-Python/blob/main/Day-05/notes.md)
+
+
+
