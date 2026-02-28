@@ -245,4 +245,4 @@ Today you learned:
 - Industry best practices
 - Common numerical mistakes
 
-Next topic: User Input and Output
+Next topic: [Strings and String Operations](https://github.com/Akash-141/Beginner-to-Advanced-Python/blob/main/Day-06/notes.md)
