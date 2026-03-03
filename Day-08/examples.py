@@ -1,27 +1,46 @@
-# Creating a list
-numbers = [5, 10, 15, 20, 25]
+print("Day 8: Comments and Code Readability Examples")
 
-# Accessing items
-print(numbers[0])
-print(numbers[-1])
+# Single-line comment
+print("Hello, Python")
 
-# Modifying an item
-numbers[2] = 100
-print(numbers)
+# Inline comment example
+x = 10  # store the value 10 in x
+print(x)
 
-# Adding items
-numbers.append(30)
-numbers.insert(1, 7)
-print(numbers)
+# Docstring example
+"""
+This program calculates the area of a rectangle.
+It takes length and width as input.
+"""
+length = 5
+width = 3
+print(length * width)
 
-# Removing items
-numbers.remove(7)
-numbers.pop(0)
-print(numbers)
+# Poor readability example
+a = 5
+b = 10
+c = a + b
+print(c)
 
-# Looping through the list
-for num in numbers:
-    print(num)
+# Improved readability example
+first_number = 5
+second_number = 10
+total_sum = first_number + second_number
+print(total_sum)
 
-# Length of the list
-print(len(numbers))
+# Good spacing example
+result = (5 + 3) * 2
+print(result)
+
+# Function with docstring
+def calculate_area(length, width):
+    """Return the area of a rectangle."""
+    return length * width
+
+print(calculate_area(5, 3))
+
+# Loop readability example
+for i in range(10):
+    print(i)
+
+print("End of Day 8 examples")
