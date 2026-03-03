@@ -1,26 +1,41 @@
-# For loop example
-for i in range(1, 6):
-    print(i)
+print("Day 7: Input and Output Examples")
 
-# Loop through string
-word = "Code"
-for char in word:
-    print(char)
+# Basic print
+print("Hello, World")
 
-# While loop example
-count = 5
-while count > 0:
-    print(count)
-    count -= 1
+# Printing multiple values
+name = "Akash"
+age = 21
+print("Name:", name, "Age:", age)
 
-# Break example
-for i in range(10):
-    if i == 7:
-        break
-    print(i)
+# Using sep and end
+print("Python", "Java", "C++", sep=" | ")
+print("Hello", end=" ")
+print("World")
 
-# Continue example
-for i in range(6):
-    if i % 2 == 0:
-        continue
-    print(i)
+# Basic input
+# name = input("Enter your name: ")
+# print("Hello", name)
+
+# Input with conversion
+# age = int(input("Enter your age: "))
+# print("Next year you will be", age + 1)
+
+# Multiple inputs
+# x = int(input("Enter first number: "))
+# y = int(input("Enter second number: "))
+# print("Sum:", x + y)
+
+# f-string formatting
+name = "Akash"
+score = 95
+print(f"{name} scored {score} marks")
+
+# Basic validation example
+# try:
+#     age = int(input("Enter your age: "))
+#     print(f"Next year you will be {age + 1}")
+# except ValueError:
+#     print("Please enter a valid number")
+
+print("End of Day 7 examples")
