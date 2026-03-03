@@ -181,4 +181,4 @@ Today you learned:
 - Formatting techniques
 - Best practices and common mistakes
 
-Next topic: [Input and output]()
+Next topic: [Input and output](https://github.com/Akash-141/Beginner-to-Advanced-Python/blob/main/Day-07/notes.md)
