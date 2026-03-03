@@ -113,3 +113,7 @@ https://marketplace.visualstudio.com/items?itemName=ms-python.python
 - How to verify installation
 - How to run Python interactively
 - How to run Python files
+
+Next topic: [Python Syntax and Indentation](https://github.com/Akash-141/Beginner-to-Advanced-Python/blob/main/Day-03/notes.md)
+
+
