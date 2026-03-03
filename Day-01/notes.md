@@ -103,3 +103,6 @@ python hello.py
 - What programming is
 - What Python is
 - How to write your first Python program
+
+Next topic: [Installing Python and Setting Up Your Environment](https://github.com/Akash-141/Beginner-to-Advanced-Python/blob/main/Day-02/notes.md)
+
