@@ -193,4 +193,4 @@ Today you learned:
 - How to format output professionally
 - Common beginner mistakes
 
-Next topic: [Comments and Code Readability]()
+Next topic: [Comments and Code Readability](https://github.com/Akash-141/Beginner-to-Advanced-Python/blob/main/Day-08/notes.md)
