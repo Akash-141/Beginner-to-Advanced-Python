@@ -1,108 +1,189 @@
-# Day 9: Functions in Python
+# Day 9: Type Casting
 
-## 1. What is a Function?
+## 1. Definition of the Topic
 
-A function is a reusable block of code that performs a specific task.
+**Type casting** (also called type conversion) is the process of converting one data type into another.
 
-Functions help organize code and avoid repetition.
+In Python, type casting allows you to change the type of a variable explicitly using built-in functions like:
 
-Official documentation:
-https://docs.python.org/3/tutorial/controlflow.html#defining-functions
+- int()
+- float()
+- str()
+- bool()
+- list()
+- tuple()
+- set()
 
----
-
-## 2. Defining a Function
-
-You define a function using the def keyword.
-
-```python
-def greet():
-    print("Hello!")
-```
-
-To run the function:
-
-```python
-greet()
-```
+Python is a dynamically typed language, but sometimes we must manually convert types to perform correct operations.
 
 ---
 
-## 3. Functions with Parameters
+## 2. Detailed Explanation of the Topic
 
-Parameters allow you to pass information into a function.
+Python automatically assigns data types to variables, but it does NOT automatically convert incompatible types during operations.
 
-```python
-def greet(name):
-    print("Hello", name)
+Example:
 
-greet("Alice")
-```
+num = "10"
+# print(num + 5)  # This will cause an error
 
----
+Why? Because "10" is a string, and 5 is an integer.
 
-## 4. Returning Values
+To fix this, we use type casting:
 
-Functions can return a value using return.
-
-```python
-def add(a, b):
-    return a + b
-
-result = add(5, 3)
-print(result)
-```
+num = "10"
+converted_num = int(num)
+print(converted_num + 5)
 
 ---
 
-## 5. Multiple Parameters
+### 2.1 Converting to Integer
 
-```python
-def multiply(x, y):
-    return x * y
+x = 5.9
+print(int(x))  # Removes decimal part
 
-print(multiply(4, 6))
-```
+Converting string to integer:
 
----
+age = "21"
+print(int(age))
 
-## 6. Default Parameters
+Invalid conversion example:
 
-You can give parameters default values.
-
-```python
-def greet(name="Guest"):
-    print("Hello", name)
-
-greet()
-greet("Bob")
-```
+# print(int("hello"))  # ValueError
 
 ---
 
-## 7. Why Use Functions?
+### 2.2 Converting to Float
 
-- Code reusability
-- Better organization
-- Easier debugging
-- Cleaner programs
+num2 = 10
+print(float(num2))
 
----
-
-## Practice Tasks
-
-1. Write a function that prints your name.
-2. Create a function that adds two numbers.
-3. Create a function that multiplies three numbers.
-4. Write a function that checks if a number is even.
-5. Use a function to calculate the square of a number.
+price = "19.99"
+print(float(price))
 
 ---
 
-## What You Learned Today
+### 2.3 Converting to String
 
-- How to define functions
-- Calling functions
-- Parameters
-- return statement
-- Default parameters
+number = 100
+print(str(number))
+
+Useful in concatenation:
+
+age2 = 25
+print("I am " + str(age2) + " years old")
+
+---
+
+### 2.4 Converting to Boolean
+
+In Python:
+
+- 0, 0.0, "", None → False
+- Everything else → True
+
+print(bool(0))
+print(bool(1))
+print(bool(""))
+print(bool("Python"))
+
+---
+
+### 2.5 Converting Between Collections
+
+numbers = [1, 2, 3, 3]
+print(set(numbers))  # Removes duplicates
+
+text = "hello"
+print(list(text))
+
+values = (1, 2, 3)
+print(list(values))
+
+---
+
+## 3. Do's and Don'ts
+
+### Do's
+
+- Always check the original data type before casting
+- Use int() or float() when taking numeric input
+- Use str() when combining numbers with text
+- Handle potential errors using try-except
+- Understand how boolean conversion works
+
+### Don'ts
+
+- Do NOT assume string numbers behave like integers
+- Do NOT cast invalid strings to numbers
+- Do NOT ignore possible ValueError exceptions
+- Do NOT overuse casting unnecessarily
+
+---
+
+## 4. Industry Standards
+
+Professional developers:
+
+- Validate input before casting
+- Use try-except for safe conversions
+- Avoid unnecessary type conversions
+- Write readable conversion logic
+
+Example with validation:
+
+user_input = "25"
+
+try:
+    age3 = int(user_input)
+    print(f"Next year you will be {age3 + 1}")
+except ValueError:
+    print("Invalid input. Please enter a number.")
+
+---
+
+## 5. Mistakes to Avoid
+
+### 5.1 Forgetting That input() Returns String
+
+age = input("Enter age: ")
+# print(age + 1)  # Error
+
+Correct:
+
+age = int(input("Enter age: "))
+print(age + 1)
+
+---
+
+### 5.2 Invalid Numeric Conversion
+
+# int("12.5")  # ValueError
+
+Correct:
+
+print(int(float("12.5")))
+
+---
+
+### 5.3 Misunderstanding Boolean Conversion
+
+print(bool("False"))  # True because non-empty string
+
+---
+
+## 6. Summary
+
+Today you learned:
+
+- What type casting is
+- Why type conversion is necessary
+- How to use int(), float(), str(), bool()
+- How to convert between collections
+- Common beginner mistakes
+- Industry-level best practices
+
+Type casting is essential for handling user input, data processing, and real-world Python applications.
+
+Next topic: [Conditional statements (if, else)](https://github.com/Akash-141/Beginner-to-Advanced-Python/blob/main/Day-10/notes.md)
+
