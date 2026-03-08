@@ -1,117 +1,308 @@
-# Day 10: Dictionaries in Python
+# Day 10: Conditional Statements (if, else)
 
-## 1. What is a Dictionary?
+## 1. Definition of the Topic
 
-A dictionary is a collection of key-value pairs.
+**Conditional statements** allow a Python program to make decisions based on conditions.
 
-Dictionaries are written using curly braces {}.
+They control the flow of execution depending on whether a condition is **True** or **False**.
 
-```python
-person = {
-    "name": "Alice",
-    "age": 25,
-    "city": "New York"
-}
-```
+Python provides the following decision-making keywords:
 
-Official documentation:
-https://docs.python.org/3/tutorial/datastructures.html#dictionaries
+- `if`
+- `else`
+- `elif` (else-if)
+
+These are fundamental for building logical, interactive, and real-world programs.
 
 ---
 
-## 2. Accessing Values
+## 2. Detailed Explanation of the Topic
 
-You access values using their keys.
+Programs often need to behave differently depending on input or data. Conditional statements make this possible.
+
+### Basic Syntax
 
 ```python
-print(person["name"])
-print(person["age"])
+if condition:
+    # code runs if condition is True
+else:
+    # code runs if condition is False
+```
+
+The condition must evaluate to a boolean value (`True` or `False`).
+
+---
+
+### 2.1 The if Statement
+
+The `if` statement runs a block of code only when the condition is True.
+
+Example:
+
+```python
+age = 18
+
+if age >= 18:
+    print("You are eligible to vote")
+```
+
+If the condition is False, nothing happens.
+
+---
+
+### 2.2 The else Statement
+
+The `else` block runs when the `if` condition is False.
+
+Example:
+
+```python
+age = 16
+
+if age >= 18:
+    print("Eligible to vote")
+else:
+    print("Not eligible to vote")
+```
+
+Only one block will execute.
+
+---
+
+### 2.3 The elif Statement
+
+`elif` allows checking multiple conditions.
+
+Example:
+
+```python
+marks = 75
+
+if marks >= 90:
+    print("Grade A")
+elif marks >= 70:
+    print("Grade B")
+else:
+    print("Grade C")
+```
+
+Python checks conditions from top to bottom.
+
+---
+
+### 2.4 Using Comparison Operators
+
+Common operators used in conditions:
+
+- `==` equal to  
+- `!=` not equal  
+- `>` greater than  
+- `<` less than  
+- `>=` greater than or equal  
+- `<=` less than or equal  
+
+Example:
+
+```python
+num = 10
+
+if num == 10:
+    print("Number is ten")
 ```
 
 ---
 
-## 3. Adding or Updating Items
+### 2.5 Using Logical Operators
 
-You can add new key-value pairs or update existing ones.
+You can combine conditions using:
+
+- `and`
+- `or`
+- `not`
+
+Example:
 
 ```python
-person["email"] = "alice@example.com"
-person["age"] = 26
-print(person)
+age = 20
+has_id = True
+
+if age >= 18 and has_id:
+    print("Entry allowed")
+else:
+    print("Entry denied")
 ```
 
 ---
 
-## 4. Removing Items
+### 2.6 Nested if Statements
 
-### pop()
+You can place an `if` inside another `if`.
 
-Removes a key and returns its value.
-
-```python
-person.pop("city")
-```
-
-### del
+Example:
 
 ```python
-del person["age"]
-```
+age = 22
+citizen = True
 
----
-
-## 5. Looping Through a Dictionary
-
-### Loop through keys
-
-```python
-for key in person:
-    print(key)
-```
-
-### Loop through values
-
-```python
-for value in person.values():
-    print(value)
-```
-
-### Loop through both keys and values
-
-```python
-for key, value in person.items():
-    print(key, value)
+if age >= 18:
+    if citizen:
+        print("Eligible to vote")
 ```
 
 ---
 
-## 6. Dictionary Length
+### 2.7 Short if (Ternary Operator)
 
-Use len() to find how many key-value pairs exist.
+Python supports one-line conditional expressions.
+
+Example:
 
 ```python
-print(len(person))
+age = 20
+status = "Adult" if age >= 18 else "Minor"
+print(status)
 ```
 
 ---
 
-## Practice Tasks
+## 3. Do's and Don'ts
 
-1. Create a dictionary with three key-value pairs.
-2. Print one value using its key.
-3. Add a new key-value pair.
-4. Update an existing value.
-5. Remove a key.
-6. Loop through the dictionary and print keys and values.
+### ✅ Do's
+
+- Use proper indentation (4 spaces)
+- Keep conditions simple and readable
+- Use meaningful variable names
+- Order conditions logically (most specific first)
+- Use `elif` instead of multiple separate `if`s when appropriate
+
+### ❌ Don'ts
+
+- Do NOT forget the colon `:` after conditions
+- Do NOT mix tabs and spaces
+- Do NOT write overly complex conditions in one line
+- Do NOT duplicate condition checks unnecessarily
+- Do NOT ignore edge cases
 
 ---
 
-## What You Learned Today
+## 4. Industry Standards
 
-- What dictionaries are
-- Key-value pairs
-- Accessing values
-- Adding and updating items
-- Removing items
-- Looping through dictionaries
-- len() with dictionaries
+Professional Python developers follow these practices:
+
+### ✔ Follow PEP 8
+
+- 4-space indentation
+- Clear spacing around operators
+- Readable condition formatting
+
+### ✔ Keep Conditions Readable
+
+Bad:
+
+```python
+if age>=18 and has_id==True and country=="BD":
+    print("Allowed")
+```
+
+Good:
+
+```python
+if age >= 18 and has_id and country == "BD":
+    print("Allowed")
+```
+
+### ✔ Prefer Early Returns in Functions
+
+Example:
+
+```python
+def check_even(number):
+    if number % 2 != 0:
+        return "Odd"
+    return "Even"
+
+print(check_even(4))
+```
+
+---
+
+## 5. Mistakes to Avoid
+
+### ❌ 5.1 Missing Colon
+
+```python
+# if age >= 18   ❌ SyntaxError
+#     print("Adult")
+```
+
+Correct:
+
+```python
+if age >= 18:
+    print("Adult")
+```
+
+---
+
+### ❌ 5.2 Wrong Indentation
+
+```python
+age = 20
+
+if age >= 18:
+print("Adult")  # ❌ IndentationError
+```
+
+---
+
+### ❌ 5.3 Using = Instead of ==
+
+```python
+# if age = 18:  ❌ SyntaxError
+#     print("Equal")
+```
+
+Correct:
+
+```python
+if age == 18:
+    print("Equal")
+```
+
+---
+
+### ❌ 5.4 Overusing Nested if
+
+Bad:
+
+```python
+if age >= 18:
+    if age < 60:
+        print("Working age")
+```
+
+Better:
+
+```python
+if 18 <= age < 60:
+    print("Working age")
+```
+
+---
+
+## 6. Summary
+
+Today you learned:
+
+- What conditional statements are
+- How `if`, `else`, and `elif` work
+- How to use comparison and logical operators
+- Nested conditions
+- Ternary operator
+- Industry best practices
+- Common beginner mistakes
+
+Conditional statements are the **brain of decision-making** in Python programs.
+
+Next topic: [elif and nested conditions]()
+
