@@ -304,5 +304,5 @@ Today you learned:
 
 Conditional statements are the **brain of decision-making** in Python programs.
 
-Next topic: [elif and nested conditions]()
+Next topic: [elif and nested conditions](https://github.com/Akash-141/Beginner-to-Advanced-Python/blob/main/Day-11/notes.md)
 
