@@ -1,30 +1,62 @@
-# Creating a dictionary
-student = {
-    "name": "John",
-    "age": 20,
-    "grade": "A"
-}
+print("Day 10: Conditional Statements Examples")
 
-# Accessing values
-print(student["name"])
-print(student["grade"])
+# Basic if
+age = 18
+if age >= 18:
+    print("You are eligible to vote")
 
-# Adding a new key-value pair
-student["email"] = "john@example.com"
+# if-else example
+age = 16
+if age >= 18:
+    print("Eligible to vote")
+else:
+    print("Not eligible to vote")
 
-# Updating a value
-student["age"] = 21
+# elif example
+marks = 75
+if marks >= 90:
+    print("Grade A")
+elif marks >= 70:
+    print("Grade B")
+else:
+    print("Grade C")
 
-print(student)
+# Comparison operator example
+num = 10
+if num == 10:
+    print("Number is ten")
 
-# Removing a key
-student.pop("grade")
+# Logical operators example
+age = 20
+has_id = True
+if age >= 18 and has_id:
+    print("Entry allowed")
+else:
+    print("Entry denied")
 
-print(student)
+# Nested if example
+age = 22
+citizen = True
+if age >= 18:
+    if citizen:
+        print("Eligible to vote")
 
-# Looping through dictionary
-for key, value in student.items():
-    print(key, value)
+# Ternary operator example
+age = 20
+status = "Adult" if age >= 18 else "Minor"
+print(status)
 
-# Length of dictionary
-print(len(student))
+# Early return function example
+def check_even(number):
+    if number % 2 != 0:
+        return "Odd"
+    return "Even"
+
+print(check_even(4))
+
+# Range comparison example
+age = 30
+if 18 <= age < 60:
+    print("Working age")
+
+print("End of Day 10 examples")
