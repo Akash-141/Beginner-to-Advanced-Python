@@ -296,5 +296,5 @@ Today you learned:
 
 Understanding `elif` and nested conditions helps you build **complex decision-making logic**, which is essential for real-world Python programs.
 
-Next topic: [Logical Operators]()
+Next topic: [Logical Operators](https://github.com/Akash-141/Beginner-to-Advanced-Python/blob/main/Day-12/notes.md)
 
