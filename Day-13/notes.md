@@ -1,4 +1,4 @@
-# Day 12: While Loops in Python
+# Day 13: While Loops
 
 ## 1. Definition
 
