@@ -244,4 +244,4 @@ https://docs.python.org/3/tutorial/controlflow.html#while-statements
 
 Real Python guide: https://realpython.com/python-while-loop/
 
-Next topic: [For loops]()
+Next topic: [For loops](https://github.com/Akash-141/Beginner-to-Advanced-Python/blob/main/Day-14/notes.md)
