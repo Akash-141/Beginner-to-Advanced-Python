@@ -319,4 +319,4 @@ Today you learned:
 
 Logical operators are essential for building **smart decision-making systems**, such as authentication systems, validations, filters, and business logic.
 
-Next topic: [While loops]()
+Next topic: [While loops](https://github.com/Akash-141/Beginner-to-Advanced-Python/blob/main/Day-13/notes.md)
