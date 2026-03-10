@@ -1,4 +1,4 @@
-# Day: For Loops in Python
+# Day: For Loops
 
 ## 1. Definition
 
