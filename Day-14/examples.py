@@ -67,4 +67,4 @@ for item in items:
 for index, item in enumerate(items):
     print(index, item)
 
-print("End of examples")
+print("End of Day 14 examples")
