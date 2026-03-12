@@ -1,19 +1,60 @@
-# Import entire module
-import math
 
-print(math.pi)
-print(math.sqrt(36))
+print("Day 15: Loop Control Statements Examples")
 
-# Import specific function
-from math import pow
+# break example
+for number in range(1, 10):
+    if number == 5:
+        break
+    print(number)
 
-print(pow(2, 3))
+# continue example
+for number in range(1, 6):
+    if number == 3:
+        continue
+    print(number)
 
-# Using alias
-import math as m
+# pass example
+for number in range(5):
+    if number == 2:
+        pass
+    print(number)
 
-print(m.factorial(5))
+# break inside a while loop
+count = 1
+while True:
+    print(count)
+    if count == 5:
+        break
+    count += 1
 
-# Custom module example (if mymodule.py exists)
-# import mymodule
-# print(mymodule.greet("John"))
+# searching for a value
+numbers = [10, 25, 30, 45, 50]
+
+for num in numbers:
+    if num == 30:
+        print("Number found")
+        break
+
+# skipping invalid data
+numbers = [5, -2, 8, -1, 10]
+
+for num in numbers:
+    if num < 0:
+        continue
+    print(num)
+
+# efficient search example
+items = ["apple", "banana", "mango"]
+
+for item in items:
+    if item == "banana":
+        print("Item found")
+        break
+
+# filtering odd numbers
+for num in range(10):
+    if num % 2 == 0:
+        continue
+    print(num)
+
+print("End of Day 15 examples")
