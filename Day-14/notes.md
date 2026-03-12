@@ -260,5 +260,5 @@ https://docs.python.org/3/tutorial/controlflow.html#for-statements
 
 Real Python guide: https://realpython.com/python-for-loop/
 
-Next topic: [Loop control statements]()
+Next topic: [Loop control statements](https://github.com/Akash-141/Beginner-to-Advanced-Python/blob/main/Day-15/notes.md)
 
