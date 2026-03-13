@@ -1,5 +1,5 @@
 
-# Day: Lists in Python
+# Day 16: Lists in Python
 
 ## 1. Definition of the Topic
 
