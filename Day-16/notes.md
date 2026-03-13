@@ -1,88 +1,302 @@
-# Day 16: Working with Files in Python
 
-## 1. What is File Handling?
+# Day: Lists in Python
 
-File handling allows you to create, read, update, and delete files using Python.
+## 1. Definition of the Topic
 
-Official documentation:
-https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files
+A **list** in Python is a built-in data structure used to store **multiple values in a single variable**.
+Lists are **ordered**, **mutable**, and **allow duplicate values**.
 
----
+Lists are one of the most widely used data structures in Python and are commonly used to store collections of data such as numbers, text, or objects.
 
-## 2. Opening a File
-
-Use the open() function.
-
-```python
-file = open("example.txt", "r")
-```
-
-Modes:
-- "r"  -> Read
-- "w"  -> Write (overwrites file)
-- "a"  -> Append
-- "x"  -> Create (fails if file exists)
-- "b"  -> Binary mode
+Official Documentation:
+https://docs.python.org/3/tutorial/datastructures.html#more-on-lists
 
 ---
 
-## 3. Reading a File
+## 2. Detailed Explanation of the Topic
+
+Lists are created using **square brackets []**, and each item in the list is separated by a comma.
+
+Example structure:
 
 ```python
-file = open("example.txt", "r")
-content = file.read()
-print(content)
-file.close()
+my_list = [item1, item2, item3]
 ```
 
-Better way (recommended):
+Important properties of Python lists:
 
-```python
-with open("example.txt", "r") as file:
-    print(file.read())
-```
+- Lists maintain the **order** of items
+- Lists are **mutable**, meaning items can be modified
+- Lists allow **duplicate elements**
+- Lists can contain **multiple data types**
+- Lists support **indexing**
+
+Lists are heavily used in real-world programming tasks like:
+
+- storing user data
+- processing datasets
+- handling sequences of values
+- implementing algorithms
 
 ---
 
-## 4. Writing to a File
+### 2.1 Creating a List
+
+Lists are defined using square brackets.
+
+Example:
 
 ```python
-with open("example.txt", "w") as file:
-    file.write("Hello, world!")
-```
-
----
-
-## 5. Appending to a File
-
-```python
-with open("example.txt", "a") as file:
-    file.write("\nNew line added.")
+numbers = [10, 20, 30, 40]
+print(numbers)
 ```
 
 ---
 
-## 6. Why Use 'with'?
+### 2.2 Lists with Different Data Types
 
-The with statement automatically closes the file after use.
-It is safer and cleaner.
+Python lists can store different types of data.
 
----
+Example:
 
-## Practice Tasks
-
-1. Create a file and write your name into it.
-2. Read the file and print its content.
-3. Append a new line to the file.
-4. Try opening a file in different modes.
-5. Experiment with reading line by line using readlines().
+```python
+data = [10, "Python", 3.14, True]
+print(data)
+```
 
 ---
 
-## What You Learned Today
+### 2.3 Accessing List Elements
 
-- open() function
-- File modes (r, w, a, x)
-- Reading files
-- Writing files
-- Using with statement
+Elements inside a list can be accessed using **index numbers**.
+
+Indexing starts from **0**.
+
+Example:
+
+```python
+fruits = ["apple", "banana", "mango"]
+print(fruits[0])
+print(fruits[1])
+```
+
+---
+
+### 2.4 Negative Indexing
+
+Python also supports **negative indexing**, which accesses elements from the end of the list.
+
+Example:
+
+```python
+fruits = ["apple", "banana", "mango"]
+print(fruits[-1])
+```
+
+Explanation:
+
+`-1` refers to the last element of the list.
+
+---
+
+### 2.5 Modifying List Values
+
+Lists are mutable, meaning their values can be changed.
+
+Example:
+
+```python
+numbers = [1, 2, 3]
+numbers[1] = 10
+print(numbers)
+```
+
+---
+
+### 2.6 Getting the Length of a List
+
+The built-in `len()` function returns the number of elements in a list.
+
+Example:
+
+```python
+items = ["pen", "book", "eraser"]
+print(len(items))
+```
+
+---
+
+### 2.7 Nested Lists
+
+A list can contain another list inside it.
+
+Example:
+
+```python
+matrix = [
+    [1, 2, 3],
+    [4, 5, 6]
+]
+
+print(matrix[0])
+print(matrix[1][2])
+```
+
+Nested lists are commonly used to represent **tables, grids, and matrices**.
+
+---
+
+### 2.8 Iterating Through a List
+
+Lists are frequently used with loops.
+
+Example:
+
+```python
+numbers = [10, 20, 30]
+
+for number in numbers:
+    print(number)
+```
+
+---
+
+## 3. Do's and Don'ts
+
+### Do's
+
+- Use lists when you need an **ordered collection of items**
+- Use descriptive variable names
+- Keep list formatting readable
+- Use loops to process list elements
+
+### Don'ts
+
+- Do not mix unrelated data unnecessarily
+- Do not use confusing variable names
+- Do not create excessively large lists without a reason
+
+---
+
+## 4. Industry Standards
+
+Professional developers follow the **PEP 8 style guide**.
+
+PEP 8:
+https://peps.python.org/pep-0008/
+
+Best practices include:
+
+### Use meaningful variable names
+
+Bad:
+
+```python
+x = [1, 2, 3]
+```
+
+Better:
+
+```python
+scores = [1, 2, 3]
+```
+
+---
+
+### Maintain readable spacing
+
+Bad:
+
+```python
+numbers=[1,2,3,4,5]
+```
+
+Better:
+
+```python
+numbers = [1, 2, 3, 4, 5]
+```
+
+---
+
+### Use lists to group related data
+
+Example:
+
+```python
+students = ["Ali", "Sara", "John"]
+
+for student in students:
+    print(student)
+```
+
+---
+
+## 5. Mistakes to Avoid
+
+### Index Out of Range
+
+Bad:
+
+```python
+numbers = [10, 20, 30]
+print(numbers[5])
+```
+
+This causes:
+
+`IndexError: list index out of range`
+
+---
+
+### Treating Non‑Lists as Lists
+
+Bad:
+
+```python
+numbers = 10
+print(numbers[0])
+```
+
+Correct:
+
+```python
+numbers = [10, 20, 30]
+print(numbers[0])
+```
+
+---
+
+### Modifying Invalid Index
+
+Bad:
+
+```python
+items = ["pen", "book"]
+items[5] = "pencil"
+```
+
+Correct:
+
+```python
+items = ["pen", "book"]
+items[1] = "pencil"
+```
+
+---
+
+## 6. Summary
+
+In this lesson you learned:
+
+- What lists are
+- How to create lists
+- How to access elements using indexes
+- How to modify list items
+- How to measure list length
+- How nested lists work
+- How lists are used with loops
+
+Lists are one of the **most fundamental and powerful data structures in Python**.
+
+Next topic: [List methods]()
