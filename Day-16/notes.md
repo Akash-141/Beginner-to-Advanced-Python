@@ -299,4 +299,4 @@ In this lesson you learned:
 
 Lists are one of the **most fundamental and powerful data structures in Python**.
 
-Next topic: [List methods]()
+Next topic: [List methods](https://github.com/Akash-141/Beginner-to-Advanced-Python/blob/main/Day-17/notes.md)
