@@ -1,36 +1,57 @@
-# Day 18 Examples: Decorators and Generators
 
-# ---------- Decorator Example ----------
-def my_decorator(func):
-    def wrapper(*args, **kwargs):
-        print("Something is happening before the function.")
-        result = func(*args, **kwargs)
-        print("Something is happening after the function.")
-        return result
-    return wrapper
+print("Day 18: Tuple Examples")
 
-@my_decorator
-def say_hello(name):
-    print(f"Hello, {name}!")
+# Creating a tuple
+numbers = (10, 20, 30)
+print(numbers)
 
-say_hello("Akash")
+# Tuple with multiple data types
+data = (10, "Python", 3.14, True)
+print(data)
 
+# Accessing tuple elements
+fruits = ("apple", "banana", "mango")
+print(fruits[0])
+print(fruits[2])
 
-# ---------- Generator Example ----------
-def even_numbers(limit):
-    num = 0
-    while num <= limit:
-        yield num
-        num += 2
+# Negative indexing
+print(fruits[-1])
 
-print("\nEven numbers up to 10:")
-for n in even_numbers(10):
-    print(n)
+# Tuple length
+items = ("pen", "book", "eraser")
+print(len(items))
 
+# Nested tuples
+matrix = (
+    (1, 2, 3),
+    (4, 5, 6)
+)
 
-# ---------- Generator Expression ----------
-squares = (x*x for x in range(6))
+print(matrix[0])
+print(matrix[1][2])
 
-print("\nSquares using generator expression:")
-for s in squares:
-    print(s)
+# Iterating through a tuple
+numbers = (10, 20, 30)
+for number in numbers:
+    print(number)
+
+# Tuple packing and unpacking
+person = ("Alice", 25, "Engineer")
+
+name, age, profession = person
+
+print(name)
+print(age)
+print(profession)
+
+# Tuple for coordinates
+coordinates = (10.5, 20.3)
+print(coordinates)
+
+# Tuple unpacking example
+point = (5, 10)
+x, y = point
+print(x)
+print(y)
+
+print("End of Day 18 examples")
