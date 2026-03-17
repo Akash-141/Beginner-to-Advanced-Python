@@ -325,4 +325,4 @@ In this lesson you learned:
 
 List methods are essential tools for working with collections of data in Python programs.
 
-Next topic: [Tuples]()
+Next topic: [Tuples](https://github.com/Akash-141/Beginner-to-Advanced-Python/blob/main/Day-18/notes.md)
