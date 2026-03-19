@@ -1,44 +1,71 @@
-# Day 19 Examples: Context Managers
+print("Day 19: Sets Examples")
 
-# ---------- Basic with example ----------
-with open("sample.txt", "w") as f:
-    f.write("Hello from Day 19!")
+numbers = {1, 2, 3, 4}
+print(numbers)
 
-with open("sample.txt", "r") as f:
-    print("File content:", f.read())
+numbers = set([1, 2, 3, 4])
+print(numbers)
 
+values = {1, 2, 2, 3, 3, 4}
+print(values)
 
-# ---------- Custom Context Manager (Class) ----------
-class Timer:
-    def __enter__(self):
-        import time
-        self.start = time.time()
-        print("Timer started")
-        return self
+colors = {"red", "green", "blue"}
+print(colors)
 
-    def __exit__(self, exc_type, exc_val, exc_tb):
-        import time
-        end = time.time()
-        print(f"Timer stopped. Duration: {end - self.start:.4f} seconds")
+fruits = {"apple", "banana", "mango"}
+print("apple" in fruits)
+print("grape" in fruits)
 
-with Timer():
-    total = sum(range(1000000))
+animals = {"cat", "dog", "tiger"}
+for animal in animals:
+    print(animal)
 
+set1 = {1, 2, 3}
+set2 = {3, 4, 5}
+result = set1 | set2
+print(result)
 
-# ---------- Context Manager using contextlib ----------
-from contextlib import contextmanager
+set1 = {1, 2, 3}
+set2 = {2, 3, 4}
+result = set1 & set2
+print(result)
 
-@contextmanager
-def simple_context():
-    print("Entering simple context")
-    yield
-    print("Exiting simple context")
+set1 = {1, 2, 3}
+set2 = {2, 3, 4}
+result = set1 - set2
+print(result)
 
-with simple_context():
-    print("Inside simple context")
+languages = {"Python", "Java", "C++"}
+print(languages)
 
+numbers = {1, 2, 2, 3, 4, 4, 5}
+print(numbers)
 
-# ---------- Reading large file safely ----------
-with open("sample.txt", "r") as f:
-    for line in f:
-        print("Line:", line.strip())
+fruits = {"apple", "banana", "orange"}
+if "apple" in fruits:
+    print("Apple is in the set")
+
+colors = {"red", "blue", "green"}
+for color in colors:
+    print(color)
+
+a = {1, 2, 3}
+b = {3, 4, 5}
+print(a | b)
+print(a & b)
+print(a - b)
+
+numbers = [1, 2, 2, 3, 4, 4]
+unique_numbers = set(numbers)
+print(unique_numbers)
+
+allowed_users = {"alice", "bob", "charlie"}
+username = "alice"
+if username in allowed_users:
+    print("Access granted")
+
+data = [1, 2, 2, 3, 4, 4, 5]
+unique_data = list(set(data))
+print(unique_data)
+
+print("End of Day 19 examples")
