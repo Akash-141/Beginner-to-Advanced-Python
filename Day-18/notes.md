@@ -294,4 +294,4 @@ In this lesson you learned:
 
 Tuples are important for representing **fixed, structured, and immutable data** in Python programs.
 
-Next topic: [Sets]()
+Next topic: [Sets](https://github.com/Akash-141/Beginner-to-Advanced-Python/blob/main/Day-19/notes.md)
