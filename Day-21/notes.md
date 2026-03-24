@@ -1,118 +1,189 @@
-# Day 21: Virtual Environments and pip
 
-## 1. Why Virtual Environments?
+# Day 21: Dictionary Methods
 
-When working on multiple Python projects, different projects may require different package versions.
+## 1. Definition of the Topic
 
-Without virtual environments:
-- Packages can conflict
-- System Python gets messy
-- Projects become hard to maintain
+Dictionary methods are built-in functions in Python that allow you to perform operations on dictionaries such as accessing data, updating values, removing elements, and iterating through key-value pairs.
 
-A virtual environment creates an isolated Python workspace for each project.
+These methods help make dictionary operations efficient and readable.
 
----
-
-## 2. Creating a Virtual Environment
-
-### Step 1: Create environment
-
-```bash
-python -m venv venv
-```
-
-This creates a folder named `venv`.
+Official documentation:
+https://docs.python.org/3/library/stdtypes.html#mapping-types-dict
 
 ---
 
-### Step 2: Activate environment
+## 2. Detailed Explanation of the Topic
 
-**Windows:**
+Common dictionary methods:
 
-```bash
-venv\Scripts\activate
-```
-
-**Mac/Linux:**
-
-```bash
-source venv/bin/activate
-```
-
-When activated, you will see `(venv)` in your terminal.
+- get()
+- keys()
+- values()
+- items()
+- update()
+- pop()
+- popitem()
+- clear()
+- copy()
 
 ---
 
-### Step 3: Deactivate environment
+### get()
 
-```bash
-deactivate
+```python
+student = {"name": "Alice", "age": 20}
+print(student.get("name"))
+print(student.get("grade"))
 ```
 
 ---
 
-## 3. What is pip?
+### keys()
 
-`pip` is Python's package manager. It allows you to install and manage external libraries.
-
----
-
-## 4. Installing Packages
-
-```bash
-pip install requests
-```
-
-Install a specific version:
-
-```bash
-pip install requests==2.31.0
+```python
+student = {"name": "Alice", "age": 20}
+print(student.keys())
 ```
 
 ---
 
-## 5. Viewing Installed Packages
+### values()
 
-```bash
-pip list
+```python
+student = {"name": "Alice", "age": 20}
+print(student.values())
 ```
 
 ---
 
-## 6. Saving Dependencies (requirements.txt)
+### items()
 
-Save installed packages:
-
-```bash
-pip freeze > requirements.txt
+```python
+student = {"name": "Alice", "age": 20}
+print(student.items())
 ```
-
-Install from requirements file:
-
-```bash
-pip install -r requirements.txt
-```
-
-This is very important for sharing projects.
 
 ---
 
-## 7. Best Practices
+### update()
 
-- Always use virtual environments
-- Never install packages globally for projects
-- Commit requirements.txt to GitHub
-- Use clear environment names
+```python
+student = {"name": "Alice"}
+student.update({"age": 20})
+print(student)
+```
 
 ---
 
-## 🎯 Summary
+### pop()
 
-Today you learned:
+```python
+student = {"name": "Alice", "age": 20}
+removed = student.pop("age")
+print(removed)
+print(student)
+```
 
-- Why virtual environments matter
-- How to create and activate venv
-- How to use pip
-- How to manage project dependencies
+---
 
-You're now working like a real Python developer. 🚀
+### popitem()
+
+```python
+student = {"name": "Alice", "age": 20}
+print(student.popitem())
+```
+
+---
+
+### clear()
+
+```python
+student = {"name": "Alice", "age": 20}
+student.clear()
+print(student)
+```
+
+---
+
+### copy()
+
+```python
+original = {"a": 1, "b": 2}
+copy_dict = original.copy()
+print(copy_dict)
+```
+
+---
+
+## 3. Easy Short Code Examples
+
+```python
+user = {"username": "admin"}
+print(user.get("username"))
+
+data = {"a": 1, "b": 2}
+print(data.keys())
+print(data.values())
+
+for key, value in data.items():
+    print(key, value)
+
+config = {"theme": "light"}
+config.update({"theme": "dark"})
+print(config)
+
+numbers = {"one": 1, "two": 2}
+numbers.pop("one")
+print(numbers)
+```
+
+---
+
+## 4. Do's and Don'ts
+
+### Do's
+- Use get() to avoid errors
+- Use items() for iteration
+- Use update() for merging
+
+### Don'ts
+- Avoid direct key access without checking
+- Do not confuse pop() and popitem()
+
+---
+
+## 5. Industry Standards
+
+```python
+user = {"name": "Alice"}
+age = user.get("age", 0)
+print(age)
+
+data = {"a": 1, "b": 2}
+for key, value in data.items():
+    print(f"{key}: {value}")
+```
+
+---
+
+## 6. Mistakes to Avoid
+
+```python
+data = {"a": 1}
+# print(data["b"])  # KeyError
+
+a = {"x": 1}
+b = a
+b["x"] = 2
+print(a)
+```
+
+---
+
+## Summary
+
+- Dictionary methods simplify data handling
+- They help safely access and modify data
+- They are widely used in real-world applications
+
+Next topic: [Basic problem solving with collections]()
