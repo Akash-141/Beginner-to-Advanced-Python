@@ -1,24 +1,58 @@
-# Day 21 Examples: pip usage in Python
 
-# NOTE:
-# These examples assume you installed 'requests' using:
-# pip install requests
+print("Day 21: Dictionary Methods Examples")
 
-# ---------- Example: Using an external package ----------
-import requests
+student = {"name": "Alice", "age": 20}
+print(student.get("name"))
+print(student.get("grade"))
 
-response = requests.get("https://api.github.com")
+print(student.keys())
+print(student.values())
+print(student.items())
 
-print("Status code:", response.status_code)
-print("Content type:", response.headers.get("content-type"))
+student = {"name": "Alice"}
+student.update({"age": 20})
+print(student)
 
+student = {"name": "Alice", "age": 20}
+removed = student.pop("age")
+print(removed)
+print(student)
 
-# ---------- Example: Simple helper function ----------
-def check_website(url):
-    try:
-        r = requests.get(url, timeout=5)
-        return f"{url} is UP (status {r.status_code})"
-    except requests.RequestException:
-        return f"{url} is DOWN"
+student = {"name": "Alice", "age": 20}
+print(student.popitem())
 
-print(check_website("https://www.python.org"))
+student = {"name": "Alice", "age": 20}
+student.clear()
+print(student)
+
+original = {"a": 1, "b": 2}
+copy_dict = original.copy()
+print(copy_dict)
+
+user = {"username": "admin"}
+print(user.get("username"))
+
+data = {"a": 1, "b": 2}
+print(data.keys())
+print(data.values())
+
+for key, value in data.items():
+    print(key, value)
+
+config = {"theme": "light"}
+config.update({"theme": "dark"})
+print(config)
+
+numbers = {"one": 1, "two": 2}
+numbers.pop("one")
+print(numbers)
+
+user = {"name": "Alice"}
+age = user.get("age", 0)
+print(age)
+
+data = {"a": 1, "b": 2}
+for key, value in data.items():
+    print(f"{key}: {value}")
+
+print("End of Day 21 examples")
