@@ -186,4 +186,4 @@ print(a)
 - They help safely access and modify data
 - They are widely used in real-world applications
 
-Next topic: [Basic problem solving with collections]()
+Next topic: [Basic problem solving with collections](https://github.com/Akash-141/Beginner-to-Advanced-Python/blob/main/Day-22/notes.md)
