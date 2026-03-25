@@ -244,3 +244,5 @@ print(max(numbers))
 - Collections are powerful tools for solving problems
 - Choosing the right structure improves performance
 - Practice with real problems to master these concepts
+
+Next topic: [Functions]()
