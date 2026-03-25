@@ -1,43 +1,61 @@
-# Day 22 Examples: Inheritance & Polymorphism
 
-# ---------- Basic Inheritance ----------
-class Animal:
-    def speak(self):
-        print("Animal makes a sound")
+print("Day 22: Basic Problem Solving with Collections")
 
-class Dog(Animal):
-    pass
+# Sum using list
+numbers = [1, 2, 3, 4, 5]
+total = 0
+for num in numbers:
+    total += num
+print(total)
 
-dog = Dog()
-dog.speak()
+# Remove duplicates using set
+numbers = [1, 2, 2, 3, 4, 4]
+unique_numbers = set(numbers)
+print(unique_numbers)
 
+# Counting using dictionary
+text = "apple banana apple"
+words = text.split()
+count = {}
+for word in words:
+    count[word] = count.get(word, 0) + 1
+print(count)
 
-# ---------- Method Overriding ----------
-class Cat(Animal):
-    def speak(self):
-        print("Cat meows")
+# Tuple usage
+point = (10, 20)
+print(point[0], point[1])
 
-cat = Cat()
-cat.speak()
+# Combine collections
+numbers = [1, 2, 2, 3, 4]
+unique = set(numbers)
+result = list(unique)
+print(result)
 
+# Find max
+numbers = [10, 20, 30, 5]
+print(max(numbers))
 
-# ---------- Using super() ----------
-class Bird(Animal):
-    def speak(self):
-        super().speak()
-        print("Bird chirps")
+# Remove duplicates example
+data = [1, 1, 2, 3, 3]
+print(list(set(data)))
 
-bird = Bird()
-bird.speak()
+# Frequency count
+items = ["a", "b", "a", "c", "b", "a"]
+freq = {}
+for item in items:
+    freq[item] = freq.get(item, 0) + 1
+print(freq)
 
+# Filter even numbers
+numbers = [1, 2, 3, 4, 5, 6]
+evens = []
+for num in numbers:
+    if num % 2 == 0:
+        evens.append(num)
+print(evens)
 
-# ---------- Polymorphism Example ----------
-class Cow:
-    def speak(self):
-        print("Cow moos")
+# Membership check
+names = {"Alice", "Bob", "Charlie"}
+print("Alice" in names)
 
-animals = [Dog(), Cat(), Bird(), Cow()]
-
-print("\nPolymorphism demo:")
-for a in animals:
-    a.speak()
+print("End of Day 22 examples")
