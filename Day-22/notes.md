@@ -245,4 +245,4 @@ print(max(numbers))
 - Choosing the right structure improves performance
 - Practice with real problems to master these concepts
 
-Next topic: [Functions]()
+Next topic: [Functions](https://github.com/Akash-141/Beginner-to-Advanced-Python/blob/main/Day-23/notes.md)
