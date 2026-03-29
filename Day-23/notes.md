@@ -160,4 +160,4 @@ def greet(name):
 - They make code reusable
 - They are essential for clean programming
 
-Next topic: [Function arguments and return values]()
+Next topic: [Function arguments and return values](https://github.com/Akash-141/Beginner-to-Advanced-Python/blob/main/Day-24/notes.md)
