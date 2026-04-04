@@ -292,3 +292,5 @@ def outer():
 - Lifetime defines how long variables exist
 - Prefer local variables for safer and cleaner code
 - Use global and nonlocal only when necessary
+
+Next topic: [Lambda functions]()
