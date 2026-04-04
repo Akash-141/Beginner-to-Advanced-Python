@@ -245,3 +245,6 @@ print(add(2, 3))
 - Arguments make functions flexible
 - Return values provide output
 - Understanding argument types is essential for real-world coding
+
+Next topic: [Scope and Lifetime of Variables](https://github.com/Akash-141/Beginner-to-Advanced-Python/blob/main/Day-25/notes.md)
+
