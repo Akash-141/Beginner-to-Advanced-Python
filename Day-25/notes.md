@@ -294,3 +294,4 @@ def outer():
 - Use global and nonlocal only when necessary
 
 Next topic: [Lambda functions]()
+
