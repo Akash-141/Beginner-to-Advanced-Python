@@ -293,5 +293,5 @@ def outer():
 - Prefer local variables for safer and cleaner code
 - Use global and nonlocal only when necessary
 
-Next topic: [Lambda functions]()
+Next topic: [Lambda functions](https://github.com/Akash-141/Beginner-to-Advanced-Python/blob/main/Day-26/notes.md)
 
