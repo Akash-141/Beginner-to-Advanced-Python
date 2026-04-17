@@ -204,3 +204,5 @@ complex_func = lambda x: x**2 + x + 10
 - Best used for simple operations
 - Commonly used with map, filter, and sorted
 - Avoid complex logic in lambda
+
+Next topic: [Basic error handling](https://github.com/Akash-141/Beginner-to-Advanced-Python/blob/main/Day-27/notes.md)
