@@ -219,4 +219,4 @@ Open Python in interactive mode and try a few simple calculations and print stat
 - How to create and run Python files from the terminal
 - How to set up VS Code with the official Python extension
 
-**Next topic:** Coming soon in Day 3
+Next topic: [Python Syntax and Indentation](https://github.com/Akash-141/Beginner-to-Advanced-Python/blob/main/Day-03/notes.md)
