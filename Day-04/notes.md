@@ -41,8 +41,8 @@ print(type(height))  # <class 'float'>
 
 ```python
 name = "Akash"
-age = 21
-height = 5.8
+age = 25
+height = 5.11
 is_student = True
 ```
 
