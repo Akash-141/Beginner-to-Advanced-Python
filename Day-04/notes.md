@@ -23,8 +23,8 @@ Variables are created the moment you assign a value using the equals sign `=`.
 
 ```python
 name = "Akash"      # Python knows this is a string
-age = 21            # Python knows this is an integer
-height = 5.8        # Python knows this is a float
+age = 25            # Python knows this is an integer
+height = 5.11        # Python knows this is a float
 ```
 
 You can check the type of any variable using the built-in `type()` function:
@@ -58,7 +58,7 @@ Variable names must follow these rules:
 
 ```python
 user_name = "Akash"
-_age = 21
+_age = 25
 total_score = 95
 firstName = "Akash"   # works, but not recommended style
 ```
@@ -148,7 +148,7 @@ Booleans are very useful in conditions and decision-making.
 
 - **List** → ordered collection: `numbers = [1, 2, 3]`
 - **Tuple** → immutable collection: `point = (10, 20)`
-- **Dictionary** → key-value pairs: `person = {"name": "Akash", "age": 21}`
+- **Dictionary** → key-value pairs: `person = {"name": "Akash", "age": 25}`
 - **NoneType** → represents “no value”: `result = None`
 
 You will learn these in more detail in later lessons.
@@ -160,7 +160,7 @@ You will learn these in more detail in later lessons.
 Sometimes you need to convert a value from one data type to another. This is called **type conversion** or **casting**.
 
 ```python
-age = 21
+age = 25
 age_str = str(age)        # Convert integer to string
 
 print(type(age))          # <class 'int'>
@@ -248,7 +248,7 @@ Professional Python projects and teams almost always follow these naming convent
 ### Mixing Data Types Unintentionally
 
 ```python
-age = "21"          # This is a string, not a number
+age = "25"          # This is a string, not a number
 result = age + 5    # TypeError: can only concatenate str to str
 ```
 
