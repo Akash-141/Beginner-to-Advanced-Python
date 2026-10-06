@@ -293,3 +293,5 @@ for i in range(10):
 
 Writing readable code is a professional superpower.  
 Always write code for **humans first**, computers second.
+
+Next topic: [Type casting](https://github.com/Akash-141/Beginner-to-Advanced-Python/blob/main/Day-09/notes.md)
